@@ -112,7 +112,7 @@ $harga = (int)$produk['harga'];
         <div class="product-details">
             <div class="product-header">
                 <h1 class="product-title"><?= htmlspecialchars($produk['nama_produk']) ?></h1>
-                <p class="product-subtitle"><em><?= htmlspecialchars($produk['deskripsi']) ?></em></p>
+                <p class="product-subtitle"><em><?= htmlspecialchars($produk['latin']) ?></em></p>
                 <p class="product-price">Rp. <?= number_format($produk['harga'], 0, ',', '.') ?></p>
             </div>
 

@@ -9,6 +9,7 @@ if (!isset($_SESSION['id_admin'])) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nama = $_POST['nama'];
+    $latin = $_POST['latin'];
     $deskripsi = $_POST['deskripsi'];
     $stok = $_POST['stok'];
     $harga = $_POST['harga'];
@@ -17,8 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     move_uploaded_file($_FILES['gambar']['tmp_name'], "../src/" . $gambar);
 
-    $query = "INSERT INTO produk (nama_produk, deskripsi, stok, harga, gambar, id_admin) 
-              VALUES ('$nama', '$deskripsi', $stok, $harga, '$gambar', $id_admin)";
+    $query = "INSERT INTO produk (nama_produk, latin, deskripsi, stok, harga, gambar, id_admin) 
+              VALUES ('$nama','$latin', '$deskripsi', $stok, $harga, '$gambar', $id_admin)";
     mysqli_query($conn, $query);
     header("Location: dashboard.php");
 }
@@ -123,6 +124,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="form-group">
             <label for="nama">Nama Produk</label>
             <input type="text" name="nama" id="nama" required>
+        </div>
+
+        <div class="form-group">
+            <label for="latin">Nama Latin</label>
+            <input type="text" name="latin" id="latin" style="font-style:italic;" required>
         </div>
 
         <div class="form-group">

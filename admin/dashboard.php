@@ -113,6 +113,7 @@ $result = mysqli_query($conn, $query);
         <tr>
             <th>No</th>
             <th>Nama Produk</th>
+            <th>Nama Latin</th>
             <th>Harga</th>
             <th>Stok</th>
             <th>Gambar</th>
@@ -123,6 +124,7 @@ $result = mysqli_query($conn, $query);
                 <tr>
                     <td><?= $no++ ?></td>
                     <td><?= htmlspecialchars($row['nama_produk']) ?></td>
+                    <td><?= htmlspecialchars($row['latin']) ?></td>
                     <td>Rp <?= number_format($row['harga'], 0, ',', '.') ?></td>
                     <td><?= $row['stok'] ?></td>
                     <td><img src="../src/<?= htmlspecialchars($row['gambar']) ?>" width="60"></td>
