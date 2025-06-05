@@ -1,0 +1,261 @@
+ @font-face {
+    font-family: PlusJakarta;
+    src: url(/font/PlusJakartaSans-Variable.ttf);
+  }
+@font-face {
+  font-family: Alkatra; ;
+  src: url(/font/Alkatra-VariableFont_wght.ttf);
+}
+        body {
+            line-height: 1.6;
+            margin:0;
+            padding:0;
+            background-color: white;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .grid-container {
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            columns: 4 280px;
+            column-gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            break-inside: avoid;
+            margin-bottom: 20px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 12px;
+            border-radius: 8px;
+        }
+
+        .card h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .card p {
+            margin: 4px 0;
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+
+        .card p em {
+            color: #888;
+            font-size: 0.85em;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .hero-section-wrapper {
+            max-width: 1200px;
+            margin: 40px auto;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+
+
+        .text-content {
+            flex: 1;
+             max-width: 500px;
+            padding-right: 30px;
+            z-index: 1;
+        }
+
+        .text-content h1 {
+            font-size: 2.8em;
+            font-weight: normal;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+    /* Dropdown content, awalnya hidden */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            right: 0; /* supaya dropdown muncul ke kanan sesuai profil */
+        }
+
+    /* Link di dalam dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+    /* Hover efek untuk link dropdown */
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+    /* Tampilkan dropdown saat hover pada container dropdown */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+    /* Hover efek pada navbar link */
+        .navbar a:hover, .dropdown:hover > a {
+            background-color: #575757;
+        }
+
+        .text-content p {
+            font-size: 1.05em;
+            margin-bottom: 1.2em;
+            max-width: 500px;
+        }
+
+        .text-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .text-content ul li {
+            margin-bottom: 0.8em;
+            font-size: 1.05em;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9em;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: #555;
+        }
+
+        .image-content {
+            flex-shrink: 0;
+            width: 650px;
+            height: 650px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            overflow:visible;
+            align-self: flex-end;
+        }
+
+    .image-content img {
+        bottom: 1000px;
+        width: 130%;
+        height: auto;
+        object-fit: cover;
+        transform: translate(5%, 20%);
+        }
+
+@media (max-width: 992px) {
+    .grid-container {
+        columns: 3 250px;
+        column-gap: 15px;
+    }
+
+    .hero-section-wrapper {
+        flex-direction: column;
+        gap: 30px;
+        margin: 20px auto;
+    }
+
+    .text-content {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .text-content h1 {
+        font-size: 2.2em;
+    }
+
+    .text-content p {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .image-content {
+        width: 100%;
+        height: 350px;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .image-content img {
+        width: 100%;
+        transform: translate(0, 0);
+    }
+    .plant-image-absolute{
+       display: none; 
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        columns: 2 220px;
+        column-gap: 10px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .grid-container {
+        columns: 1 100%;
+        padding: 10px;
+    }
+    .hero-section-wrapper {
+        padding: 15px;
+    }
+    .text-content h1 {
+        font-size: 1.8em;
+    }
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.85em;
+    }
+    .image-content {
+        height: 250px;
+    }
+}

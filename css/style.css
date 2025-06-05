@@ -1,0 +1,331 @@
+@font-face {
+    font-family: Alkatra;
+    src: url(/font/Alkatra-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #319935;
+    font-family: Alkatra;
+    font-style: italic;
+}
+
+.search-container {
+    flex: 1;
+    max-width: 500px;
+    margin: 0 32px;
+    position: relative;
+}
+
+.search-input {
+    width: 100%;
+    height: 48px;
+    padding: 0 48px 0 16px;
+    border: 1px solid #d9d9d9;
+    border-radius: 25px;
+    background-color: #ffffff;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: #b2b1b1;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.cart-icon {
+    width: 24px;
+    height: 24px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.divider {
+    width: 1px;
+    height: 32px;
+    background-color: #d9d9d9;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown content, awalnya hidden */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0; /* supaya dropdown muncul ke kanan sesuai profil */
+}
+/* Link di dalam dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+/* Hover efek untuk link dropdown */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Tampilkan dropdown saat hover pada container dropdown */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+    /* Hover efek pada navbar link */
+.navbar a:hover, .dropdown:hover > a {
+    background-color: #575757;
+}
+
+/* Main Layout */
+.main-container {
+    display: flex;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 320px;
+    padding: 24px;
+    border-right: 1px solid #d9d9d9;
+    min-height:100vh;
+}
+
+.filter-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    color: #000000;
+}
+
+.filter-section {
+    margin-bottom: 32px;
+}
+
+.filter-section h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    color: #000000;
+}
+
+.price-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.price-input {
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #b2b1b1;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-size: 14px;
+    outline: none;
+}
+
+.rating-filter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.checkbox {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #b2b1b1;
+    cursor: pointer;
+}
+
+.star-icon {
+    width: 16px;
+    height: 16px;
+    fill: #fbbf24;
+    color: #fbbf24;
+}
+
+.filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.filter-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-option label {
+    font-size: 14px;
+    color: #000000;
+    cursor: pointer;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 24px;
+}
+
+.sort-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 24px;
+}
+
+.sort-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sort-label {
+    font-size: 14px;
+    color: #000000;
+}
+
+.sort-select {
+    width: 128px;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #b2b1b1;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.product-card {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-2px);
+}
+
+.product-image-container {
+    background-color: #d9d9d9;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.product-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.product-price {
+    font-size: 14px;
+    font-weight: 500;
+    color: #319935;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+            
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #d9d9d9;
+    }
+            
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+            
+    .search-container {
+        margin: 0 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+            
+    .header {
+        flex-direction: column;
+        gap: 16px;
+    }
+            
+    .search-container {
+        margin: 0;
+        max-width: 100%;
+    }
+}
