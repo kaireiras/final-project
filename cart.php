@@ -344,7 +344,7 @@ while ($item = $result_cart_items->fetch_assoc()) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         function checkout() {
-            window.location.href = 'checkout.php';
+            window.location.href = '#';
         }
 
         function backToShopping() {

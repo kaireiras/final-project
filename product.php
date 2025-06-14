@@ -148,7 +148,7 @@ $harga = (int)$produk['harga'];
                 <input type="hidden" name="id_produk" value="<?= $produk['id_produk'] ?>">
                 <input type="hidden" name="jumlah" id="jumlahInput" value="1">
                 <button class="btn btn-cart" type="submit">+ Keranjang</button>
-                <button class="btn btn-buy" type="submit" formaction="checkout.php">Beli</button>
+                <button class="btn btn-buy" type="submit" formaction="#">Beli</button>
             </form>
         </div>
     </main>
