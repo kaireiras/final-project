@@ -2,7 +2,6 @@
 include 'connection.php';
 session_start();
 
-// Ambil produk berdasarkan id
 if (!isset($_GET['id_produk'])) {
     echo "Produk tidak ditemukan.";
     exit;

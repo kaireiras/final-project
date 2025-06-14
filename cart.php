@@ -20,7 +20,7 @@ function getOrCreateCartId($conn, $id_user) {
     $result = $stmt->get_result();
 
     if ($row = $result->fetch_assoc()) {
-        return $row['id_cart']; // Cart sudah ada
+        return $row['id_cart'];
     } else {
         // Buat cart baru jika belum ada
         $stmt_insert = $conn->prepare("INSERT INTO cart (id_user) VALUES (?)");

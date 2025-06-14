@@ -18,9 +18,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     move_uploaded_file($_FILES['gambar']['tmp_name'], "../src/" . $gambar);
 
-    $query = "INSERT INTO produk (nama_produk, latin, deskripsi, stok, harga, gambar, id_admin) 
-              VALUES ('$nama','$latin', '$deskripsi', $stok, $harga, '$gambar', $id_admin)";
-    mysqli_query($conn, $query);
+    $stmt = mysqli_prepare($conn, "CALL tambah_produk(?, ?, ?, ?, ?, ?, ?)");
+    mysqli_stmt_bind_param($stmt, "sssissi", 
+        $nama, $latin, $deskripsi, $stok, $harga, $gambar, $id_admin
+    );
+
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+
     header("Location: dashboard.php");
 }
 ?>
