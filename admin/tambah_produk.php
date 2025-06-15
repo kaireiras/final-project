@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             background: #fff;
             border: 2px solid #000;
             border-radius: 20px;
-            padding: 2rem;
+            padding: 2.5rem;
             box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
         }
 
@@ -83,11 +83,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         input[type="file"],
         textarea {
             width: 100%;
-            padding: 0.75rem;
+            padding: 0.8rem;
             border: 2px solid #000;
             border-radius: 10px;
             font-size: 1rem;
             background: #fff;
+            box-sizing: border-box;
         }
 
         button {

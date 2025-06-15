@@ -85,7 +85,7 @@ $result = mysqli_query($conn, $query);
     <div class="grid-container">
       <?php while ($row = mysqli_fetch_assoc($result)) { ?>
         <div class="card">
-          <a href="test.php?id_produk=<?= $row['id_produk'] ?>" style="text-decoration: none; color: inherit;">
+          <a href="product.php?id_produk=<?= $row['id_produk'] ?>" style="text-decoration: none; color: inherit;">
             <div class="card-image-wrapper">
               <img src="src/<?= htmlspecialchars($row['gambar']) ?>" alt="<?= htmlspecialchars($row['nama_produk']) ?>" />
             </div>
